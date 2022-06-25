@@ -27,7 +27,7 @@ a:hover {
 }
 
 body {
-    background-image: url('background.jpg');
+    background-image: url(background.jpg);
     background-repeat: repeat-y;
 }
 
@@ -73,6 +73,7 @@ body {
 }
 
 .column-right {
+    position: relative;
     color: #ffffff;
     width: 780px;
     padding-left: 40px;
@@ -120,7 +121,7 @@ body {
 }
 
 .activities li {
-    list-style-image: url(star.svg);
+    list-style-image: url(star-magenta.svg);
     margin-top: 10px;
     padding-left: 4px;
 }
@@ -148,13 +149,40 @@ body {
     margin-top: 30px;
 }
 
+.expitem {
+    position: relative;
+}
+
 .expitem:not(:first-child) {
     margin-top: 80px;
+}
+
+.expitem-bullet {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: -54px;
+}
+
+.expitem-indicator {
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: -48px;
+    transform: scale(0);
+    transition: transform 0.4s cubic-bezier(0.12, 0.69, 0.49, 2);
 }
 
 .expitem-name {
     font-size: 30px;
     font-weight: 500;
+}
+
+.expitem-name.selected span {
+    background: linear-gradient(90.69deg, #e704ec 3.01%, #ff004c 117.26%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .expitem-position {
@@ -194,8 +222,28 @@ body {
     margin-top: 8px;
 }
 
+.editem {
+    position: relative;
+}
+
 .editem:not(:first-child) {
     margin-top: 70px;
+}
+
+.editem-bullet {
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: -54px;
+}
+
+.editem-indicator {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: -48px;
+    transform: scale(0);
+    transition: transform 0.4s;
 }
 
 .expitem-link {

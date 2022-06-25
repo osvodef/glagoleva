@@ -161,14 +161,14 @@ body {
     display: block;
     position: absolute;
     top: 8px;
-    left: -54px;
+    left: -55px;
 }
 
 .expitem-indicator {
     display: block;
     position: absolute;
     top: 14px;
-    left: -48px;
+    left: -49px;
     transform: scale(0);
     transition: transform 0.4s cubic-bezier(0.12, 0.69, 0.49, 2);
 }
@@ -234,14 +234,14 @@ body {
     display: block;
     position: absolute;
     top: 2px;
-    left: -54px;
+    left: -55px;
 }
 
 .editem-indicator {
     display: block;
     position: absolute;
     top: 8px;
-    left: -48px;
+    left: -49px;
     transform: scale(0);
     transition: transform 0.4s;
 }

@@ -1,0 +1,271 @@
+@font-face {
+    font-family: Mak;
+    src: url('mak-bold.otf') format('opentype');
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+a:hover {
+    border-bottom-color: #e704ec;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-repeat: repeat-y;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    margin-top: 140px;
+    display: flex;
+}
+
+.avatar {
+    display: block;
+    width: 500px;
+    height: 590px;
+}
+
+.title {
+    margin: 72px 0 0 40px;
+    color: #ffffff;
+}
+
+.name {
+    font-family: Mak;
+    font-size: 58px;
+}
+
+.occupation {
+    margin-top: 18px;
+    font-size: 38px;
+}
+
+.content {
+    margin-top: 120px;
+    display: flex;
+}
+
+.column-left {
+    width: 420px;
+}
+
+.column-right {
+    color: #ffffff;
+    width: 780px;
+    padding-left: 40px;
+}
+
+.column-right a {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+.column-right a:hover {
+    border-bottom: 1px solid #e704ec;
+}
+
+.section:not(:first-child) {
+    margin-top: 120px;
+}
+
+.section-header {
+    font-family: Mak;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+.section-content {
+    margin-top: 40px;
+    font-size: 22px;
+}
+
+.section.about .section-content {
+    margin-top: 42px;
+}
+
+.section.contacts .section-content,
+.section.recs .section-content,
+.section.languages .section-content,
+.section.citizenships .section-content {
+    margin-top: 20px;
+}
+
+.activities {
+    margin-left: 23px;
+    font-weight: 500;
+    margin-right: 60px;
+}
+
+.activities li {
+    list-style-image: url(star.svg);
+    margin-top: 10px;
+    padding-left: 4px;
+}
+
+.experience-years {
+    margin-top: 26px;
+    font-weight: 500;
+}
+
+.phone a,
+.telegram a {
+    border: none;
+}
+
+.phone a:hover,
+.telegram a:hover {
+    color: #e704ec;
+}
+
+.telegram {
+    margin-top: 10px;
+}
+
+.cv {
+    margin-top: 30px;
+}
+
+.expitem:not(:first-child) {
+    margin-top: 80px;
+}
+
+.expitem-name {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.expitem-position {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.expitem-period {
+    margin-top: 2px;
+    font-size: 22px;
+    color: #6b6b6b;
+}
+
+.expitem ul {
+    margin: 15px 0 30px 18px;
+}
+
+.expitem ul li {
+    margin-top: 8px;
+}
+
+.expitem ul.condensed li {
+    margin-top: 4px;
+}
+
+.expitem ul li span {
+    position: relative;
+    left: -7px;
+}
+
+.expitem ul li p {
+    margin-left: -6px;
+}
+
+.expitem p {
+    margin-top: 8px;
+}
+
+.editem:not(:first-child) {
+    margin-top: 70px;
+}
+
+.expitem-link {
+    margin-top: 20px;
+}
+
+.expitem-description {
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.editem-year {
+    color: #6b6b6b;
+}
+
+.editem-uni {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.editem-major {
+    margin-top: 20px;
+}
+
+a.example {
+    display: block;
+    border: none;
+}
+
+a.example:hover {
+    border: none;
+}
+
+.example:not(:first-child) {
+    margin-top: 80px;
+}
+
+.example-preview {
+    display: block;
+    width: 740px;
+    height: 416px;
+}
+
+.example-name {
+    margin-top: 20px;
+}
+
+.example-name span {
+    border-bottom: 1px solid #ffffff;
+}
+
+.example:hover .example-name span {
+    border-bottom: 1px solid #e704ec;
+}
+
+.etudes-header {
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 80px;
+}
+
+.etudes {
+    margin-top: 30px;
+}
+
+.etude {
+    margin-top: 22px;
+}
+
+.section:last-child {
+    margin-bottom: 120px;
+}

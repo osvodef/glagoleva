@@ -79,6 +79,7 @@ function closeMenu() {
 }
 
 adjustBackground();
+adjustContacts();
 adjustTopbar();
 moveIndicator();
 
@@ -93,4 +94,10 @@ document.querySelector('.close-button').addEventListener('click', () => closeMen
 
 document.querySelectorAll('.menu-item a').forEach(item => {
     item.addEventListener('click', () => closeMenu());
+});
+
+window.addEventListener('load', () => {
+    document.querySelectorAll('.asterisk').forEach(asterisk => {
+        asterisk.style.transform = 'scale(1)';
+    });
 });

@@ -147,6 +147,24 @@ body {
     font-size: 58px;
 }
 
+.name.wide {
+    display: block;
+}
+
+.name.narrow {
+    display: none;
+}
+
+.asterisk {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    top: -16px;
+    left: 2px;
+    transform: scale(0);
+    transition: transform 0.4s cubic-bezier(0.12, 0.69, 0.49, 2);
+}
+
 .occupation {
     margin-top: 18px;
     font-size: 38px;
@@ -443,6 +461,21 @@ a.example:hover {
 
     .name {
         font-size: 52px;
+    }
+
+    .name.wide {
+        display: none;
+    }
+
+    .name.narrow {
+        display: block;
+    }
+
+    .asterisk {
+        width: 30px;
+        height: 30px;
+        top: -21px;
+        left: 4px;
     }
 
     .occupation {

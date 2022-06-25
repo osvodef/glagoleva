@@ -34,9 +34,91 @@ a:hover {
     border-bottom-color: #e704ec;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -98px;
+    visibility: hidden;
+}
+
 body {
     background-image: url(background.jpg);
     background-repeat: repeat-y;
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 98px;
+    background-color: #f6f6f6;
+    background-image: url(background.jpg);
+}
+
+.topbar-inner {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.logo {
+    display: block;
+    width: 312px;
+    height: 28px;
+    margin-top: 30px;
+}
+
+.menu-button {
+    width: 24px;
+    height: 18px;
+    margin-top: 33px;
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    padding: 140px 0 0 40px;
+    transform: translateX(100%);
+    transition: transform 0.4s;
+}
+
+.menu-item {
+    display: block;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.menu-item a {
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+}
+
+.menu-item a:hover {
+    color: #e704ec;
+}
+
+.menu-separator {
+    width: 740px;
+    border-bottom: 2px solid #6b6b6b;
+    margin: 40px 0;
+}
+
+.close-button {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 40px;
+    left: 760px;
+    cursor: pointer;
 }
 
 .container {
@@ -46,7 +128,7 @@ body {
 
 .header {
     width: 100%;
-    margin-top: 140px;
+    margin-top: 80px;
     display: flex;
 }
 
@@ -327,6 +409,28 @@ a.example:hover {
 }
 
 @media (max-width: 1200px) {
+    .topbar {
+        height: 60px;
+    }
+
+    a.anchor {
+        top: -60px;
+    }
+
+    .logo {
+        width: 221px;
+        height: 20px;
+        margin-top: 20px;
+    }
+
+    .menu-button {
+        margin-top: 20px;
+    }
+
+    .header {
+        margin-top: 60px;
+    }
+
     .avatar {
         width: 300px;
     }
@@ -340,6 +444,10 @@ a.example:hover {
     }
 
     .container {
+        width: 720px;
+    }
+
+    .topbar-inner {
         width: 720px;
     }
 
@@ -429,5 +537,22 @@ a.example:hover {
 
     .etude {
         margin-top: 15px;
+    }
+
+    .menu {
+        padding-top: 80px;
+    }
+
+    .menu-item {
+        font-size: 24px;
+    }
+
+    .menu-separator {
+        width: 420px;
+    }
+
+    .close-button {
+        left: 440px;
+        top: 20px;
     }
 }

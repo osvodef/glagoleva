@@ -1,10 +1,25 @@
 const rightColumn = document.querySelector('.column-right');
 const indicator = document.querySelector('.indicator');
+const header = document.querySelector('.header');
+const topbar = document.querySelector('.topbar');
+const menu = document.querySelector('.menu');
 
 function adjustBackground() {
     const offset = window.scrollX + rightColumn.getBoundingClientRect().left;
 
     document.body.style.backgroundPositionX = `${-1600 + offset}px`;
+    topbar.style.backgroundPositionX = `${-1600 + offset}px`;
+    menu.style.left = `${Math.floor(offset)}px`;
+}
+
+function adjustTopbar() {
+    const contentPosition = header.getBoundingClientRect().bottom;
+
+    if (contentPosition < 0) {
+        topbar.style.display = 'block';
+    } else {
+        topbar.style.display = 'none';
+    }
 }
 
 function moveIndicator() {
@@ -41,8 +56,25 @@ function selectSection(sections) {
     return sections[sections.length - 1];
 }
 
+function openMenu() {
+    menu.style.transform = 'translateX(0)';
+}
+
+function closeMenu() {
+    menu.style.transform = 'translateX(100%)';
+}
+
 adjustBackground();
+adjustTopbar();
 moveIndicator();
 
 window.addEventListener('resize', () => adjustBackground());
+window.addEventListener('scroll', () => adjustTopbar());
 window.addEventListener('scroll', () => moveIndicator());
+
+document.querySelector('.menu-button').addEventListener('click', () => openMenu());
+document.querySelector('.close-button').addEventListener('click', () => closeMenu());
+
+document.querySelectorAll('.menu-item a').forEach(item => {
+    item.addEventListener('click', () => closeMenu());
+});

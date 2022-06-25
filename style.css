@@ -185,6 +185,12 @@ body {
     margin-top: 120px;
 }
 
+.section.fixed {
+    position: fixed;
+    margin-top: 0;
+    top: 128px;
+}
+
 .section-header {
     font-family: Mak;
     font-size: 48px;
@@ -485,6 +491,11 @@ a.example:hover {
 
     .section:not(:first-child) {
         margin-top: 90px;
+    }
+
+    .section.fixed {
+        top: 90px;
+        margin-top: 0;
     }
 
     .section:last-child {

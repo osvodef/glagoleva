@@ -1,5 +1,7 @@
+const contacts = document.querySelector('.section.contacts');
 const rightColumn = document.querySelector('.column-right');
 const indicator = document.querySelector('.indicator');
+const about = document.querySelector('.section.about');
 const header = document.querySelector('.header');
 const topbar = document.querySelector('.topbar');
 const menu = document.querySelector('.menu');
@@ -19,6 +21,18 @@ function adjustTopbar() {
         topbar.style.display = 'block';
     } else {
         topbar.style.display = 'none';
+    }
+}
+
+function adjustContacts() {
+    const padding = window.innerWidth > 1200 ? 120 : 90;
+    const topbarHeight = window.innerWidth > 1200 ? 98 : 60;
+    const position = about.getBoundingClientRect().bottom + padding;
+
+    if (position < topbarHeight + 30) {
+        contacts.classList.add('fixed');
+    } else {
+        contacts.classList.remove('fixed');
     }
 }
 
@@ -69,6 +83,8 @@ adjustTopbar();
 moveIndicator();
 
 window.addEventListener('resize', () => adjustBackground());
+window.addEventListener('resize', () => adjustContacts());
+window.addEventListener('scroll', () => adjustContacts());
 window.addEventListener('scroll', () => adjustTopbar());
 window.addEventListener('scroll', () => moveIndicator());
 

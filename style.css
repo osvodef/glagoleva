@@ -740,8 +740,12 @@ a.example:hover {
         margin-top: 20px;
     }
 
+    .expitem-link {
+        margin-top: 15px;
+    }
+
     .expitem-description {
-        margin-top: 25px;
+        margin-top: 30px;
         font-size: 14px;
     }
 

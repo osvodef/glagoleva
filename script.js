@@ -62,7 +62,7 @@ function moveIndicator() {
 
 function selectSection(sections) {
     for (const section of sections) {
-        if (section.getBoundingClientRect().top > 0) {
+        if (section.getBoundingClientRect().top > topbar.offsetHeight) {
             return section;
         }
     }

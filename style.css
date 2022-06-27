@@ -733,7 +733,20 @@ a.example:hover {
     }
 
     .expitem-name {
+        margin-left: 23px;
         font-size: 20px;
+    }
+
+    .expitem-bullet {
+        top: 7px;
+        left: 0;
+        width: 16px;
+    }
+
+    .expitem-indicator {
+        top: 6px;
+        left: -1px;
+        width: 18px;
     }
 
     .expitem-position {

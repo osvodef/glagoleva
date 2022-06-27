@@ -148,7 +148,7 @@ body {
 }
 
 .name {
-    font-family: Mak;
+    font-family: Mak, Arial, Helvetica, sans-serif;
     font-size: 58px;
 }
 
@@ -215,7 +215,7 @@ body {
 }
 
 .section-header {
-    font-family: Mak;
+    font-family: Mak, Arial, Helvetica, sans-serif;
     font-size: 48px;
     text-transform: uppercase;
 }

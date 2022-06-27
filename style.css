@@ -18,6 +18,14 @@ body {
     overflow-x: hidden;
 }
 
+.desktop {
+    display: block !important;
+}
+
+.mobile {
+    display: none !important;
+}
+
 ul,
 p {
     padding: 0;
@@ -76,6 +84,7 @@ body {
 }
 
 .menu-button {
+    display: block;
     width: 24px;
     height: 18px;
     margin-top: 33px;
@@ -437,7 +446,7 @@ a.example:hover {
     margin-bottom: 120px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 720px) {
     .topbar {
         height: 60px;
     }
@@ -602,5 +611,180 @@ a.example:hover {
     .close-button {
         left: 440px;
         top: 20px;
+    }
+}
+
+@media (max-width: 720px) {
+    html,
+    body,
+    .container,
+    .column-left,
+    .column-right,
+    .topbar-inner,
+    .header,
+    .avatar,
+    .example-preview,
+    .menu {
+        width: 100%;
+    }
+
+    .menu {
+        top: 34px;
+        padding: 30px 10px;
+    }
+
+    .menu-item {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .topbar,
+    .title,
+    .column-left,
+    .column-right {
+        padding: 0 10px;
+    }
+
+    .content {
+        display: block;
+        margin: 0;
+    }
+
+    body {
+        background: none;
+    }
+
+    .topbar {
+        height: 34px;
+        background-image: url(bg-white.jpg);
+    }
+
+    .logo {
+        width: 157px;
+        margin-top: 10px;
+    }
+
+    .menu-button {
+        width: 19px;
+        height: 14px;
+        margin-top: 10px;
+    }
+
+    .column-left {
+        background-image: url(bg-white.jpg);
+        padding-bottom: 80px;
+    }
+
+    .column-right {
+        background-image: url(bg-black.jpg);
+        padding-bottom: 80px;
+    }
+
+    .desktop {
+        display: none !important;
+    }
+
+    .mobile {
+        display: block !important;
+    }
+
+    .header {
+        background-image: url(bg-white.jpg);
+        display: block;
+        margin-top: 34px;
+    }
+
+    .avatar {
+        width: 100%;
+    }
+
+    .title {
+        margin: 40px 0 0 0;
+        color: #000000;
+    }
+
+    .name {
+        font-size: 50px;
+        line-height: 60px;
+        width: 320px;
+    }
+
+    .name.wide {
+        display: none;
+    }
+
+    .name.narrow {
+        display: block;
+    }
+
+    .occupation {
+        font-size: 18px;
+    }
+
+    .section-header {
+        font-size: 28px;
+        margin-top: 80px;
+    }
+
+    .section-content {
+        margin-top: 20px !important;
+        font-size: 16px;
+    }
+
+    .expitem-name {
+        font-size: 20px;
+    }
+
+    .expitem-description {
+        font-size: 14px;
+    }
+
+    .expitem:not(:first-child) {
+        margin-top: 40px;
+    }
+
+    .section:not(:first-child) {
+        margin-top: 0;
+    }
+
+    .editem-year {
+        font-size: 16px;
+    }
+
+    .editem-uni {
+        font-size: 20px;
+    }
+
+    .editem-major {
+        font-size: 16px;
+    }
+
+    .editem:not(:first-child) {
+        margin-top: 40px;
+    }
+
+    .example:not(:first-child) {
+        margin-top: 50px;
+    }
+
+    .etudes-header {
+        margin-top: 50px;
+        font-size: 20px;
+    }
+
+    .etudes {
+        margin-top: 20px;
+    }
+
+    .etude {
+        margin-top: 15px;
+    }
+
+    .section:last-child {
+        margin-bottom: 0;
+    }
+
+    a.anchor {
+        top: 40px;
     }
 }

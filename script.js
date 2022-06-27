@@ -6,6 +6,8 @@ const header = document.querySelector('.header');
 const topbar = document.querySelector('.topbar');
 const menu = document.querySelector('.menu');
 
+let menuOpen = false;
+
 function adjustBackground() {
     const offset = window.scrollX + rightColumn.getBoundingClientRect().left;
 
@@ -15,9 +17,7 @@ function adjustBackground() {
 }
 
 function adjustTopbar() {
-    const contentPosition = header.getBoundingClientRect().bottom;
-
-    if (contentPosition < 0) {
+    if (window.innerWidth <= 720 || header.getBoundingClientRect().bottom < 0) {
         topbar.style.display = 'block';
     } else {
         topbar.style.display = 'none';
@@ -72,10 +72,30 @@ function selectSection(sections) {
 
 function openMenu() {
     menu.style.transform = 'translateX(0)';
+
+    const button = document.querySelector('.menu-button.mobile');
+    button.src = 'close.svg';
+    button.style.width = '14px';
+
+    menuOpen = true;
 }
 
 function closeMenu() {
     menu.style.transform = 'translateX(100%)';
+
+    const button = document.querySelector('.menu-button.mobile');
+    button.src = 'menu-black.svg';
+    button.style.width = '19px';
+
+    menuOpen = false;
+}
+
+function toggleMenu() {
+    if (menuOpen) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
 }
 
 adjustBackground();
@@ -85,15 +105,24 @@ moveIndicator();
 
 window.addEventListener('resize', () => adjustBackground());
 window.addEventListener('resize', () => adjustContacts());
+window.addEventListener('resize', () => adjustTopbar());
 window.addEventListener('scroll', () => adjustContacts());
 window.addEventListener('scroll', () => adjustTopbar());
 window.addEventListener('scroll', () => moveIndicator());
 
-document.querySelector('.menu-button').addEventListener('click', () => openMenu());
+document.querySelectorAll('.menu-button').forEach(button => {
+    button.addEventListener('click', () => toggleMenu());
+});
 document.querySelector('.close-button').addEventListener('click', () => closeMenu());
 
 document.querySelectorAll('.menu-item a').forEach(item => {
-    item.addEventListener('click', () => closeMenu());
+    item.addEventListener('click', e => {
+        closeMenu();
+
+        if (item.getAttribute('href') === '#contacts' && window.innerWidth <= 720) {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    });
 });
 
 window.addEventListener('load', () => {

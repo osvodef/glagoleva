@@ -75,7 +75,7 @@ function openMenu() {
 
     const button = document.querySelector('.menu-button.mobile');
     button.src = 'close.svg';
-    button.style.width = '14px';
+    button.style.width = '20px';
 
     menuOpen = true;
 }
@@ -85,7 +85,7 @@ function closeMenu() {
 
     const button = document.querySelector('.menu-button.mobile');
     button.src = 'menu-black.svg';
-    button.style.width = '19px';
+    button.style.width = '24px';
 
     menuOpen = false;
 }

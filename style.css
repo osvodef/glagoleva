@@ -565,12 +565,28 @@ a.example:hover::after {
         font-size: 18px;
     }
 
+    .expitem-bullet {
+        top: 4px;
+    }
+
+    .expitem-indicator {
+        top: 10px;
+    }
+
     .expitem-name {
         font-size: 24px;
     }
 
     .expitem-description {
         font-size: 16px;
+    }
+
+    .editem-bullet {
+        top: -1px;
+    }
+
+    .editem-indicator {
+        top: 5px;
     }
 
     .editem-uni {

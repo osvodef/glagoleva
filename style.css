@@ -786,7 +786,7 @@ a.example:hover::after {
 
     .section-header {
         font-size: 28px;
-        margin-top: 80px;
+        padding-top: 80px;
     }
 
     .section-content {

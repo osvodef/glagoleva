@@ -136,7 +136,10 @@ body {
 }
 
 .menu-item a:hover {
-    color: #e704ec;
+    background: linear-gradient(90.69deg, #e704ec 3.01%, #ff004c 117.26%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .menu-separator {
@@ -298,7 +301,10 @@ body {
 
 .phone a:hover,
 .telegram a:hover {
-    color: #e704ec;
+    background: linear-gradient(90.69deg, #e704ec 3.01%, #ff004c 117.26%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .telegram {

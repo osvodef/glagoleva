@@ -36,11 +36,21 @@ p {
 a {
     text-decoration: none;
     color: #000000;
-    border-bottom: 1px solid #000000;
+    position: relative;
 }
 
-a:hover {
-    border-bottom-color: #e704ec;
+a::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #000000;
+}
+
+a:hover::after {
+    background: linear-gradient(90.69deg, #e704ec 3.01%, #ff004c 117.26%);
 }
 
 a.anchor {
@@ -79,6 +89,10 @@ body {
     border: none;
 }
 
+.logo::after {
+    display: none;
+}
+
 .logo img {
     display: block;
     width: 100%;
@@ -115,7 +129,10 @@ body {
 .menu-item a {
     cursor: pointer;
     color: #ffffff;
-    border: none;
+}
+
+.menu-item a::after {
+    display: none;
 }
 
 .menu-item a:hover {
@@ -209,11 +226,20 @@ body {
 
 .column-right a {
     color: #ffffff;
-    border-bottom: 1px solid #ffffff;
 }
 
-.column-right a:hover {
-    border-bottom: 1px solid #e704ec;
+.column-right a::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #ffffff;
+}
+
+.column-right a:hover::after {
+    background: linear-gradient(90.69deg, #e704ec 3.01%, #ff004c 117.26%);
 }
 
 .section:not(:first-child) {
@@ -265,9 +291,9 @@ body {
     font-weight: 500;
 }
 
-.phone a,
-.telegram a {
-    border: none;
+.phone a::after,
+.telegram a::after {
+    display: none;
 }
 
 .phone a:hover,
@@ -403,11 +429,14 @@ body {
 
 a.example {
     display: block;
-    border: none;
 }
 
-a.example:hover {
-    border: none;
+a.example::after {
+    display: none;
+}
+
+a.example:hover::after {
+    display: none;
 }
 
 .example:not(:first-child) {
@@ -424,11 +453,21 @@ a.example:hover {
 }
 
 .example-name span {
-    border-bottom: 1px solid #ffffff;
+    position: relative;
 }
 
-.example:hover .example-name span {
-    border-bottom: 1px solid #e704ec;
+.example-name span::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #ffffff;
+}
+
+.example:hover .example-name span::after {
+    background: linear-gradient(90.69deg, #e704ec 3.01%, #ff004c 117.26%);
 }
 
 .etudes-header {

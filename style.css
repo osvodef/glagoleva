@@ -385,7 +385,7 @@ body {
 }
 
 .editem:not(:first-child) {
-    margin-top: 70px;
+    margin-top: 80px;
 }
 
 .editem-bullet {
@@ -418,12 +418,12 @@ body {
 }
 
 .editem-uni {
-    margin-top: 10px;
-    font-size: 30px;
+    margin-top: 5px;
     font-weight: 500;
 }
 
 .editem-major {
+    font-size: 18px;
     margin-top: 20px;
 }
 
@@ -590,7 +590,12 @@ a.example:hover::after {
     }
 
     .editem-uni {
-        font-size: 24px;
+        font-size: 18px;
+    }
+
+    .editem-major {
+        font-size: 16px;
+        margin-top: 15px;
     }
 
     .section:not(:first-child) {
@@ -832,11 +837,12 @@ a.example:hover::after {
     }
 
     .editem-uni {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .editem-major {
-        font-size: 16px;
+        font-size: 14px;
+        margin-top: 10px;
     }
 
     .editem:not(:first-child) {

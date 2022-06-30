@@ -112,7 +112,7 @@ body {
     right: 0;
     bottom: 0;
     background-color: #000000;
-    padding: 140px 0 0 40px;
+    padding: 100px 0 100px 40px;
     transform: translateX(100%);
     transition: transform 0.4s;
     overflow-y: auto;
@@ -667,6 +667,7 @@ a.example:hover::after {
 
     .menu {
         padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     .menu-item {

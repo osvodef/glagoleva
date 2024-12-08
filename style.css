@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Raleway, sans-serif;
+    font-feature-settings: 'lnum' 1;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -79,7 +80,6 @@ body {
 
 .logo {
     display: block;
-    width: 312px;
     margin-top: 30px;
     border: none;
 }
@@ -273,15 +273,17 @@ body {
 }
 
 .activities {
-    margin-left: 23px;
-    font-weight: 500;
+    list-style-type: none;
     margin-right: 60px;
 }
 
 .activities li {
-    list-style-image: url(star-magenta.svg);
     margin-top: 10px;
-    padding-left: 4px;
+}
+
+.bullet {
+    transform: scale(0.8);
+    margin-bottom: 1px;
 }
 
 .tg-logo {
@@ -331,7 +333,7 @@ body {
 
 .expitem-name {
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .expitem-name.selected span {
@@ -459,20 +461,6 @@ a.example:hover::after {
 
 .example:hover .example-name span::after {
     background: #3BB7FF;
-}
-
-.etudes-header {
-    font-size: 30px;
-    font-weight: 500;
-    margin-top: 80px;
-}
-
-.etudes {
-    margin-top: 30px;
-}
-
-.etude {
-    margin-top: 22px;
 }
 
 .section:last-child {
@@ -681,6 +669,10 @@ a.example:hover::after {
         border-radius: 0;
     }
 
+    .description {
+        font-size: 16px;
+    }
+
     .menu {
         top: 38px;
         padding: 30px 10px;
@@ -714,7 +706,7 @@ a.example:hover::after {
 
     .logo {
         width: 202px;
-        margin-top: 12px;
+        margin-top: 10px;
     }
 
     .menu-button {

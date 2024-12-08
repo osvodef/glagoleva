@@ -1,8 +1,3 @@
-@font-face {
-    font-family: Mak;
-    src: url('mak-bold.otf') format('opentype');
-}
-
 * {
     box-sizing: border-box;
 }
@@ -11,7 +6,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Raleway, sans-serif;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -50,7 +45,7 @@ a::after {
 }
 
 a:hover::after {
-    background: linear-gradient(90.69deg, #e704ec 3.01%, #ff004c 117.26%);
+    background: #3BB7FF;
 }
 
 a.anchor {
@@ -136,7 +131,7 @@ body {
 }
 
 .menu-item a:hover {
-    background: linear-gradient(90.69deg, #e704ec 3.01%, #ff004c 117.26%);
+    background: #3BB7FF;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -172,6 +167,7 @@ body {
 .avatar {
     display: block;
     width: 500px;
+    border-radius: 20px;
 }
 
 .title {
@@ -180,31 +176,24 @@ body {
 }
 
 .name {
-    font-family: Mak, Arial, Helvetica, sans-serif;
     font-size: 58px;
-}
-
-.name.wide {
-    display: block;
-}
-
-.name.narrow {
-    display: none;
-}
-
-.asterisk {
-    width: 48px;
-    height: 48px;
-    position: relative;
-    top: -16px;
-    left: 2px;
-    transform: scale(0);
-    transition: transform 0.4s cubic-bezier(0.12, 0.69, 0.49, 2);
+    font-weight: 600;
+    color: #3BB7FF;
 }
 
 .occupation {
     margin-top: 18px;
-    font-size: 38px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 18px;
+}
+
+.description:not(:first-child) {
+    margin-top: 20px;
 }
 
 .content {
@@ -242,7 +231,13 @@ body {
 }
 
 .column-right a:hover::after {
-    background: linear-gradient(90.69deg, #e704ec 3.01%, #ff004c 117.26%);
+    background: #3BB7FF;
+}
+
+.exp-duration {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .section:not(:first-child) {
@@ -256,8 +251,8 @@ body {
 }
 
 .section-header {
-    font-family: Mak, Arial, Helvetica, sans-serif;
     font-size: 48px;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -289,17 +284,17 @@ body {
     padding-left: 4px;
 }
 
-.phone a::after,
+.tg-logo {
+    margin-right: 5px;
+    transform: scale(1.1);
+}
+
 .telegram a::after {
     display: none;
 }
 
-.phone a:hover,
 .telegram a:hover {
-    background: linear-gradient(90.69deg, #e704ec 3.01%, #ff004c 117.26%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #3BB7FF;
 }
 
 .telegram {
@@ -322,14 +317,14 @@ body {
     display: block;
     position: absolute;
     top: 8px;
-    left: -55px;
+    left: -50px;
 }
 
 .expitem-indicator {
     display: block;
     position: absolute;
-    top: 14px;
-    left: -49px;
+    top: 13px;
+    left: -45px;
     transform: scale(0);
     transition: transform 0.4s cubic-bezier(0.12, 0.69, 0.49, 2);
 }
@@ -340,20 +335,15 @@ body {
 }
 
 .expitem-name.selected span {
-    background: linear-gradient(90.69deg, #e704ec 3.01%, #ff004c 117.26%);
+    background: linear-gradient(90.69deg, #3BB7FF 3.01%, #47FF9A 117.26%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .expitem-position {
-    margin-top: 30px;
+    margin-top: 10px;
     font-weight: 600;
-}
-
-.expitem-period {
-    margin-top: 2px;
-    color: #6b6b6b;
 }
 
 .expitem ul {
@@ -393,14 +383,14 @@ body {
     display: block;
     position: absolute;
     top: 2px;
-    left: -55px;
+    left: -50px;
 }
 
 .editem-indicator {
     display: block;
     position: absolute;
-    top: 8px;
-    left: -49px;
+    top: 7px;
+    left: -45px;
     transform: scale(0);
     transition: transform 0.4s cubic-bezier(0.12, 0.69, 0.49, 2);
 }
@@ -468,7 +458,7 @@ a.example:hover::after {
 }
 
 .example:hover .example-name span::after {
-    background: linear-gradient(90.69deg, #e704ec 3.01%, #ff004c 117.26%);
+    background: #3BB7FF;
 }
 
 .etudes-header {
@@ -513,6 +503,7 @@ a.example:hover::after {
 
     .avatar {
         width: 300px;
+        height: 354px;
     }
 
     .name {
@@ -525,13 +516,6 @@ a.example:hover::after {
 
     .name.narrow {
         display: block;
-    }
-
-    .asterisk {
-        width: 30px;
-        height: 30px;
-        top: -21px;
-        left: 4px;
     }
 
     .occupation {
@@ -571,7 +555,7 @@ a.example:hover::after {
     }
 
     .expitem-indicator {
-        top: 10px;
+        top: 9px;
     }
 
     .expitem-name {
@@ -587,7 +571,7 @@ a.example:hover::after {
     }
 
     .editem-indicator {
-        top: 5px;
+        top: 4px;
     }
 
     .editem-uni {
@@ -693,8 +677,12 @@ a.example:hover::after {
         width: 100%;
     }
 
+    .avatar {
+        border-radius: 0;
+    }
+
     .menu {
-        top: 34px;
+        top: 38px;
         padding: 30px 10px;
     }
 
@@ -802,13 +790,13 @@ a.example:hover::after {
     }
 
     .expitem-bullet {
-        top: 7px;
+        top: 4px;
         left: 0;
         width: 16px;
     }
 
     .expitem-indicator {
-        top: 6px;
+        top: 3px;
         left: -1px;
         width: 18px;
     }

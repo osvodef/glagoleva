@@ -124,9 +124,3 @@ document.querySelectorAll('.menu-item a').forEach(item => {
         }
     });
 });
-
-window.addEventListener('load', () => {
-    document.querySelectorAll('.asterisk').forEach(asterisk => {
-        asterisk.style.transform = 'scale(1)';
-    });
-});
